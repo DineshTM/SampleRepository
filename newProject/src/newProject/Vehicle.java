@@ -13,6 +13,7 @@ public class Vehicle {
 		vehicleName = sc.nextLine();
 		vehicle.convertCase(vehicleName);
 		vehicle.performOperation(vehicleName);
+		vehicle.reverseString(vehicleName);
 	}
 
 	public void convertCase(String name) {
@@ -38,5 +39,14 @@ public class Vehicle {
 		}else {
 			System.out.println("INVALID!!! You didnt enter a valid vehicle name ");
 		}
+	}
+	public void reverseString(String name) {
+		char arr[]= name.toCharArray();
+		char arr1[]=new char[arr.length];
+		for(int i=arr.length-1,j=0; i>=0; i--,j++) {
+		  arr1[j]=arr[i];
+		}
+		String reversedName = String.valueOf(arr1);
+		System.out.println("The reversed vehicle name is: "+reversedName);
 	}
 }
