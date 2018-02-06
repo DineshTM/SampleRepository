@@ -14,6 +14,7 @@ public class Vehicle {
 		vehicle.convertCase(vehicleName);
 		vehicle.performOperation(vehicleName);
 		vehicle.reverseString(vehicleName);
+		vehicle.combineOtherVehicle(vehicleName);
 	}
 
 	public void convertCase(String name) {
@@ -48,5 +49,12 @@ public class Vehicle {
 		}
 		String reversedName = String.valueOf(arr1);
 		System.out.println("The reversed vehicle name is: "+reversedName);
+	}
+	public void combineOtherVehicle(String name) {
+		String anotherVehicle= new String();
+		System.out.println("Enter another vehicle name : ");
+		anotherVehicle = new Scanner(System.in).nextLine();
+        name = name.concat(anotherVehicle);
+        System.out.println("The combined vehicle name is: "+name);
 	}
 }
