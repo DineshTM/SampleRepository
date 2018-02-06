@@ -12,6 +12,7 @@ public class Vehicle {
 		System.out.println("Enter a vehicle name");
 		vehicleName = sc.nextLine();
 		vehicle.convertCase(vehicleName);
+		vehicle.performOperation(vehicleName);
 	}
 
 	public void convertCase(String name) {
@@ -25,5 +26,17 @@ public class Vehicle {
 			System.out.println("INVALID!!! You didnt enter a valid vehicle name ");
 		}
 
+	}
+	public void performOperation(String name) {
+		if (name != null && name.length() != 0) {
+			name = name.trim().toLowerCase();
+			System.out.println("The index of 'a' in vehicle name is: "+name.indexOf('a'));
+			System.out.println("The length of the vehicle name is: "+name.length());
+			System.out.println("Replacing letter 'a' by letter 'e' in vehicle name "+name.replace('a','e'));
+			System.out.println("Verifying whether name is ending with r :"+name.endsWith("r"));
+			System.out.println("Verifying whether name is starting with c :"+name.startsWith("c"));
+		}else {
+			System.out.println("INVALID!!! You didnt enter a valid vehicle name ");
+		}
 	}
 }
